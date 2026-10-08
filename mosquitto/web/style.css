@@ -1,0 +1,127 @@
+/* Configurações Globais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+/* Cards */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #34495e;
+}
+
+/* Indicadores de Status */
+#status {
+  font-weight: bold;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.status-connected {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.status-disconnected {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.data-value {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2980b9;
+}
+
+/* Botões */
+button { background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Container de mensagens acumuladas */
+#sensor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 600px;
+  overflow-y: auto; /* Adiciona rolagem se a lista ficar muito longa */
+  padding: 0.5rem;
+}
+
+/* Card individual da lista */
+.sensor-card {
+  background: #ffffff;
+  border-left: 5px solid #3498db;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.card-header small {
+  color: #7f8c8d;
+  font-weight: bold;
+}
+
+.sensor-field {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.4rem;
+  border-bottom: 1px dashed #eee;
+  padding-bottom: 0.2rem;
+}
+
+.sensor-title {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.sensor-value {
+  color: #2980b9;
+  font-weight: bold;
+}

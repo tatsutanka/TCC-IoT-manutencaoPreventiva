@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard IoT - MQTT/WebSocket</title>
+  
+  <!-- Estilos Personalizados -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Biblioteca Oficial Paho MQTT via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Painel de Monitoramento ESP8266</h1>
+
+    <!-- Card de Status de Conexão -->
+    <div class="card">
+      <p>Status do Broker: <span id="status" class="status-disconnected">Desconectado</span></p>
+    </div>
+
+    <!-- Card de Leitura de Dados -->
+    <div class="card">
+      <h2>Última Mensagem Recebida</h2>
+      <p><strong>Tópico:</strong> <span id="topic">-</span></p>
+      <p><strong>Conteúdo:</strong> <span id="payload" class="data-value">-</span></p>
+    </div>
+      
+  <!-- Lista onde os cards dinâmicos serão injetados -->
+    <div id="sensor-list" class="sensor-grid">
+      <p class="empty-msg">Aguardando dados do ESP8266...</p>
+    </div>
+  </div>
+
+
+  <!-- Lógica da Aplicação -->
+  <script src="app.js"></script>
+</body>
+</html>
